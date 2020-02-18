@@ -1,0 +1,7 @@
+name: 'Generate Timestamp'
+type: module
+description: 'Test Module to generate a Timestamp'
+core: 8.x
+package: 'Custom'
+dependencies:
+    - drupal:block

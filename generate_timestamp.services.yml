@@ -1,0 +1,4 @@
+services:
+  timestamp_generator.generator:
+    class: Drupal\generate_timestamp\UserTimestampGenerator
+    arguments: []
