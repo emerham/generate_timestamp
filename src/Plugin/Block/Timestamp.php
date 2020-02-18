@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @Block(
  *  id = "timestamp",
  *  admin_label = @Translation("Timestamp"),
- *   category=
+ *  category = @Translation("Generate Timestamp"),
  * )
  */
 class Timestamp extends BlockBase implements ContainerFactoryPluginInterface {
