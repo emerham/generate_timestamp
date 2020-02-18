@@ -1,0 +1,13 @@
+{
+    "name": "emerham/generate_timestamp",
+    "description": "Drupal module to test max-age and cache",
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Matthew Brabham",
+            "email": "brabham.matthew@gmail.com"
+        }
+    ],
+    "require": {}
+}
