@@ -10,7 +10,6 @@ use Drupal\Core\Block\BlockBase;
  * @Block(
  *  id = "static_timestamp",
  *  admin_label = @Translation("Static timestamp"),
- *  category = @Translation("Generate Timestamp"),
  * )
  */
 class StaticTimestamp extends BlockBase {
