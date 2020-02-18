@@ -13,6 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @Block(
  *  id = "timestamp",
  *  admin_label = @Translation("Timestamp"),
+ *   category=
  * )
  */
 class Timestamp extends BlockBase implements ContainerFactoryPluginInterface {
@@ -56,6 +57,13 @@ class Timestamp extends BlockBase implements ContainerFactoryPluginInterface {
       $plugin_definition,
       $container->get('current_user')
     );
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  public function getCacheMaxAge() {
+    return 60;
   }
 
   /**
