@@ -18,10 +18,24 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class Timestamp extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
+   * The Account Proxy Interface.
+   *
    * @var \Drupal\Core\Session\AccountProxyInterface
    */
   private $accountProxy;
 
+  /**
+   * Timestamp constructor.
+   *
+   * @param array $configuration
+   *   A configuration array containing information about the plugin instance.
+   * @param string $plugin_id
+   *   The plugin ID for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\Core\Session\AccountProxyInterface $accountProxy
+   *   Drupal Account Proxy Interface.
+   */
   public function __construct(
     array $configuration,
     $plugin_id,
@@ -32,13 +46,10 @@ class Timestamp extends BlockBase implements ContainerFactoryPluginInterface {
     $this->accountProxy = $accountProxy;
   }
 
-
-  public static function create(
-    ContainerInterface $container,
-    array $configuration,
-    $plugin_id,
-    $plugin_definition
-  ) {
+  /**
+   * {@inheritDoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $configuration,
       $plugin_id,
@@ -63,7 +74,7 @@ class Timestamp extends BlockBase implements ContainerFactoryPluginInterface {
     $build['#markup'] = $this->t('The current timestamp is ');
     $build['#cache']['contexts'][] = 'languages';
     $build['#cache']['tags'][] = 'timestamp';
-//    $build['#cache']['max-age'] = 0;
+    // $build['#cache']['max-age'] = 0;
     return $build;
   }
 

@@ -17,7 +17,7 @@ class UserTimestampGenerator {
   }
 
   /**
-   *
+   * Generate a timestamp.
    */
   public function generateUserTimestamp() {
     // Invalidate the tag.

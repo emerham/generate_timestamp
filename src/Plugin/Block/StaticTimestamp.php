@@ -19,10 +19,7 @@ class StaticTimestamp extends BlockBase {
    */
   public function build() {
     $build = [];
-    $build['static_timestamp']['#markup'] = $this->t(
-        'Timestamp that this block was generated '
-      ) . time();
-
+    $build['static_timestamp']['#markup'] = $this->t('Timestamp that this block was generated @time', ['@time' => time()]);
     return $build;
   }
 
